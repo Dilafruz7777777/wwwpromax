@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:wwwpromax/presentation/components/button_component.dart';
 import 'package:wwwpromax/presentation/components/loading_container.dart';
 import 'package:wwwpromax/presentation/pages/auth/onboarding/onboarding2.dart';
 import 'package:wwwpromax/presentation/style/style.dart';
@@ -18,53 +17,47 @@ class _Onboarding1State extends State<Onboarding1> {
     return Scaffold(
       body: Column(
         children: [
-          150.verticalSpace,
-          Stack(
-            children: [
-              Image(
-                image: AssetImage(
-                  "assets/images/onbor.png",
+          70.verticalSpace,
+              Container(
+                height: 350.r,
+                width: 350.r,
+                child: Image(
+                  image: AssetImage(
+                    "assets/images/onbor1.png",
+                  ),
                 ),
               ),
-              Positioned(
-                top: 300,
-                left: 60,
-                child: Text(
-                  "Your convenience in\n making a todo list",
+                40.verticalSpace,
+
+                Text(
+                  "Quick & Easy Payments",
                   style: Style.textStyleBoldOnboarding(),
-                  textDirection: TextDirection.ltr,
                 ),
-              ),
-            ],
-          ),
-          10.horizontalSpace,
-          Text(
-            "Here's a mobile platform that helps you ",
-            style: Style.textStyleBoldOnboarding(),
-          ),
-          Text(
-            "create task or to list so that it can help you",
-            style: Style.textStyleBoldOnboarding(),
-          ),
-          Text(
-            " in every job easier and faster. ",
-            style: Style.textStyleBoldOnboarding(),
-          ),
           20.verticalSpace,
+          25.horizontalSpace,
+
+          Text(
+            "Get your business by accepting card\n payments with the new card reader ",
+            style: Style.textStyleNormOnboarding(),
+          ),
+          50.verticalSpace,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              LoadingContainer(
-                  color: Style.loadingBlueColor, height: 12, weight: 13),
-              8.horizontalSpace,
-              LoadingContainer(color: Style.loadingGreyColor, height: 11, weight: 32),
+              LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
               8.horizontalSpace,
               LoadingContainer(
-                  color: Style.loadingBlueColor, height: 12, weight: 13),
+                  color: Style.loadingGreyColor, height: 12, weight: 13),
+              8.horizontalSpace,
+              LoadingContainer(
+                  color: Style.loadingGreyColor, height: 12, weight: 13),
+              8.horizontalSpace,
+              LoadingContainer(
+                  color: Style.loadingGreyColor, height: 12, weight: 13),
             ],
           ),
-          90.verticalSpace,
+          40.verticalSpace,
           InkWell(
               onTap: (){
                 Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_){
@@ -72,11 +65,13 @@ class _Onboarding1State extends State<Onboarding1> {
                 }
                 ), (route) => false);
               },
-              child: ButtonComponent(
-                color: Style.loadingBlueColor,
-                text: "Continue",
-              )),
-        ],
+              child:  Image(
+                image: AssetImage(
+                  "assets/images/load1.png",
+                ),
+              ),
+          ),
+        ]
       ),
     );
   }

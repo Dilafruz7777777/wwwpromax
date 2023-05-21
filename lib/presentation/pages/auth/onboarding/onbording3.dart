@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:wwwpromax/presentation/components/button_component.dart';
 import 'package:wwwpromax/presentation/components/loading_container.dart';
-import 'package:wwwpromax/presentation/pages/auth/onboarding/onbording3.dart';
+import 'package:wwwpromax/presentation/pages/auth/onboarding/onboarding2.dart';
+import 'package:wwwpromax/presentation/pages/auth/onboarding/onbording4.dart';
 import 'package:wwwpromax/presentation/style/style.dart';
 
-class Onboarding2 extends StatefulWidget {
-  const Onboarding2({Key? key}) : super(key: key);
+class Onboarding3 extends StatefulWidget {
+  const Onboarding3({Key? key}) : super(key: key);
 
   @override
-  State<Onboarding2> createState() => _Onboarding2State();
+  State<Onboarding3> createState() => _Onboarding3State();
 }
 
-class _Onboarding2State extends State<Onboarding2> {
+class _Onboarding3State extends State<Onboarding3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,21 +24,21 @@ class _Onboarding2State extends State<Onboarding2> {
               width: 350.r,
               child: Image(
                 image: AssetImage(
-                  "assets/images/obor2.png",
+                  "assets/images/onbor1.png",
                 ),
               ),
             ),
             40.verticalSpace,
 
             Text(
-              "Smart Point Of Sale",
+              "Quick & Easy Payments",
               style: Style.textStyleBoldOnboarding(),
             ),
             20.verticalSpace,
             25.horizontalSpace,
 
             Text(
-              "Complete point of sale system \ntailored to your business needs. ",
+              "Get your business by accepting card\n payments with the new card reader ",
               style: Style.textStyleNormOnboarding(),
             ),
             50.verticalSpace,
@@ -49,10 +49,11 @@ class _Onboarding2State extends State<Onboarding2> {
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
                 8.horizontalSpace,
-                LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
-                8.horizontalSpace,
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
+                8.horizontalSpace,
+                LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
+                8.horizontalSpace,
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
               ],
@@ -61,13 +62,13 @@ class _Onboarding2State extends State<Onboarding2> {
             InkWell(
               onTap: (){
                 Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_){
-                  return Onboarding3();
+                  return Onboarding4();
                 }
                 ), (route) => false);
               },
               child:  Image(
                 image: AssetImage(
-                  "assets/images/load2.png",
+                  "assets/images/load3.png",
                 ),
               ),
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wwwpromax/presentation/pages/auth/onboarding/onboard1.dart';
+import 'package:wwwpromax/presentation/style/style.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -10,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 15), () {
+    Future.delayed(Duration(seconds: 5), () {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (_) => Onboarding1(),
@@ -22,20 +24,24 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Style.mainColor,
+      backgroundColor: Style.mainColor,
       body: Column(
         children: [
-          Container(
-            height: 150,
-            width: 150,
-            // child: Image.asset(
+          200.verticalSpace,
+          Center(
+            child: Container(
 
-            //
-            //     "assets/images/logo.png",
-            //
-            // ),
+              height: 300,
+              width: 300,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle
+              ),
+              child: Image.asset(
+                  "assets/images/splash.png",
+              ),
 
-          child: Image(image: AssetImage('assets/images/logo.png')),
+
+            ),
           ),
 
           // 280.verticalSpace,
