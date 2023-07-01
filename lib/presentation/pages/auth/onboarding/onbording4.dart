@@ -20,8 +20,8 @@ class _Onboarding4State extends State<Onboarding4> {
           children: [
             70.verticalSpace,
             Container(
-              height: 350.r,
-              width: 350.r,
+              height: 200.r,
+              width: 220.r,
               child: Image(
                 image: AssetImage(
                   "assets/images/obor2.png",
@@ -31,14 +31,14 @@ class _Onboarding4State extends State<Onboarding4> {
             40.verticalSpace,
 
             Text(
-              "Instant Notifications",
+              "COLLABORATION",
               style: Style.textStyleBoldOnboarding(),
             ),
             20.verticalSpace,
             25.horizontalSpace,
 
             Text(
-              "Instant notifications let you quickly\n see new purchases and messages ",
+              "   Our app offers a unique and \n    specialized function for companies\n    to advertise their job/educational     \nopportunities specifically for girls.",
               style: Style.textStyleNormOnboarding(),
             ),
             50.verticalSpace,
@@ -54,6 +54,7 @@ class _Onboarding4State extends State<Onboarding4> {
                 8.horizontalSpace,
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
+                8.horizontalSpace,
                 LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
               ],
             ),

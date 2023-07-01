@@ -20,25 +20,25 @@ class _Onboarding3State extends State<Onboarding3> {
           children: [
             70.verticalSpace,
             Container(
-              height: 350.r,
-              width: 350.r,
+              height: 200.r,
+              width: 220.r,
               child: Image(
                 image: AssetImage(
                   "assets/images/onbor1.png",
                 ),
               ),
             ),
-            40.verticalSpace,
+            60.verticalSpace,
 
             Text(
-              "Quick & Easy Payments",
+              "PRO VERSION",
               style: Style.textStyleBoldOnboarding(),
             ),
             20.verticalSpace,
             25.horizontalSpace,
 
             Text(
-              "Get your business by accepting card\n payments with the new card reader ",
+              "With our pro version, finding work\nthat aligns with your skills and passions\nhas never been easier. Say goodbye\nto endless job searches and hello\nto your dream career.",
               style: Style.textStyleNormOnboarding(),
             ),
             50.verticalSpace,

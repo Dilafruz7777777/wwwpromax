@@ -14,16 +14,27 @@ class _ButtonComponentState extends State<ButtonComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65.r,
-      width: 380.r,
+      height: 60.r,
+      width: 240.r,
       decoration: BoxDecoration(
         color: widget.color,
-        borderRadius: BorderRadius.all(Radius.circular(16),),
+        borderRadius: BorderRadius.all(Radius.circular(32),),
+        boxShadow: [
+          BoxShadow(
+            color: Style.loadingGreyColor,
+            offset: const Offset(
+              4.0,
+              4.0,
+            ),
+            blurRadius: 6.0,
+            spreadRadius: 2.0,
+          ), //BoxShadow
+        ],
       ),
       child: Center(
         child: Text(
           widget.text,
-          style: Style.textStyleButtonWhite(),
+          style: Style.buttonTextStyle(),
 
         ),
       ),

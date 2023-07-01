@@ -15,64 +15,60 @@ class _Onboarding1State extends State<Onboarding1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          70.verticalSpace,
-              Container(
-                height: 350.r,
-                width: 350.r,
-                child: Image(
-                  image: AssetImage(
-                    "assets/images/onbor1.png",
-                  ),
-                ),
-              ),
-                40.verticalSpace,
-
-                Text(
-                  "Quick & Easy Payments",
-                  style: Style.textStyleBoldOnboarding(),
-                ),
-          20.verticalSpace,
-          25.horizontalSpace,
-
-          Text(
-            "Get your business by accepting card\n payments with the new card reader ",
-            style: Style.textStyleNormOnboarding(),
+      body: Column(children: [
+        70.verticalSpace,
+        Container(
+          height: 220.r,
+          width: 220.r,
+          child: Image(
+            image: AssetImage(
+              "assets/images/onbor1.png",
+            ),
           ),
-          50.verticalSpace,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
-              8.horizontalSpace,
-              LoadingContainer(
-                  color: Style.loadingGreyColor, height: 12, weight: 13),
-              8.horizontalSpace,
-              LoadingContainer(
-                  color: Style.loadingGreyColor, height: 12, weight: 13),
-              8.horizontalSpace,
-              LoadingContainer(
-                  color: Style.loadingGreyColor, height: 12, weight: 13),
-            ],
+        ),
+        40.verticalSpace,
+        Text(
+          "LOW SKILLED",
+          style: Style.textStyleBoldOnboarding(),
+        ),
+        20.verticalSpace,
+        25.horizontalSpace,
+        Text(
+          " new app designed exclusively for\n females seeking employment without\n the need for formal education or \ncertificates. With this app, you can\neasily find a job as a waiter, babysitter,\n cleaner and many other opportunities\n           tailored to your needs. ",
+          style: Style.textStyleNormOnboarding(),
+        ),
+        50.verticalSpace,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            LoadingContainer(color: Style.mainColor, height: 11, weight: 32),
+            8.horizontalSpace,
+            LoadingContainer(
+                color: Style.loadingGreyColor, height: 12, weight: 13),
+            8.horizontalSpace,
+            LoadingContainer(
+                color: Style.loadingGreyColor, height: 12, weight: 13),
+            8.horizontalSpace,
+            LoadingContainer(
+                color: Style.loadingGreyColor, height: 12, weight: 13),
+          ],
+        ),
+        40.verticalSpace,
+        InkWell(
+          onTap: () {
+            Navigator.pushAndRemoveUntil(context,
+                MaterialPageRoute(builder: (_) {
+              return Onboarding2();
+            }), (route) => false);
+          },
+          child: Image(
+            image: AssetImage(
+              "assets/images/load1.png",
+            ),
           ),
-          40.verticalSpace,
-          InkWell(
-              onTap: (){
-                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_){
-                  return Onboarding2();
-                }
-                ), (route) => false);
-              },
-              child:  Image(
-                image: AssetImage(
-                  "assets/images/load1.png",
-                ),
-              ),
-          ),
-        ]
-      ),
+        ),
+      ]),
     );
   }
 }

@@ -20,8 +20,8 @@ class _Onboarding2State extends State<Onboarding2> {
           children: [
             70.verticalSpace,
             Container(
-              height: 350.r,
-              width: 350.r,
+              height: 200.r,
+              width: 200.r,
               child: Image(
                 image: AssetImage(
                   "assets/images/obor2.png",
@@ -31,15 +31,19 @@ class _Onboarding2State extends State<Onboarding2> {
             40.verticalSpace,
 
             Text(
-              "Smart Point Of Sale",
+              "HIGH SKILLED",
               style: Style.textStyleBoldOnboarding(),
             ),
             20.verticalSpace,
             25.horizontalSpace,
 
-            Text(
-              "Complete point of sale system \ntailored to your business needs. ",
-              style: Style.textStyleNormOnboarding(),
+            SizedBox(
+              height: 200.r,
+              width: 350.r,
+              child: Text(
+                "Introducing the perfect solution for\nwomen who are seeking flexible job \nopportunities that value their skills and diploma/certificate qualifications. Our app offers a multitudnof job options, from\nteaching and tutoring to massaging and beyond.",
+                style: Style.textStyleNormOnboarding(),
+              ),
             ),
             50.verticalSpace,
             Row(
@@ -53,6 +57,7 @@ class _Onboarding2State extends State<Onboarding2> {
                 8.horizontalSpace,
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
+                8.horizontalSpace,
                 LoadingContainer(
                     color: Style.loadingGreyColor, height: 12, weight: 13),
               ],
